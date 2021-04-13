@@ -37,3 +37,47 @@ deklarowanie function(){}
 f = function(param){return param}
 f2 = (param) => {return param}
 f3 = (param) => param.cos
+
+Deklaracja tablic:
+
+> let tab = [ 14,'hejka', true];
+undefined
+> console.log(tab)
+[ 14, 'hejka', true ]
+undefined
+
+warunek: 
+
+> (!tab)?console.log('Empty'):console.log('Full');
+Full
+
+do nowej tablicy z uwzglednieniem funkcji:
+
+> f = function(param){return param};
+[Function: f]
+> const tabmulti = tab.map(f);
+> console.log(tabmulti);
+[ 14, 'hejka', true ]
+
+
+łączenie arr w tablicy:
+
+> console.log(tab.join(' '));
+14 hejka true
+
+długość tablicy:
+
+> console.log(tab.length);
+3
+
+BOOL'E:
+let bool = falseco;
+
+Boolean: 
+
+> console.log(Boolean(null));
+false
+> let boool = 123;
+> console.log(Boolean(boool));
+true
+      
