@@ -15,7 +15,7 @@ cos.charAt(2)
 dodawanie stringów -
 'aaaa' + 'aaaa'
 'aaaa' + cos
-'aaa' + {zmienna}
+`aaa + {zmienna}`
 
 liczby -
 Number.isFinite(3)
