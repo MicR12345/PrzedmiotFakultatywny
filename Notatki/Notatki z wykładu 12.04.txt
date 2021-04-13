@@ -1,0 +1,39 @@
+deklaracja zmiennych -
+var,let,const
+
+typy danych -
+string: "dfyuiasuif" , 'fuiahsfa'
+użyteczne funkcje
+cos.toLowerCase()
+cos.toUpperCase()
+cos.split()
+cos.split('l')
+cos.charCodeAt(1);
+cos.trim()
+cos.includes("aa")
+cos.charAt(2)
+dodawanie stringów -
+'aaaa' + 'aaaa'
+'aaaa' + cos
+'aaa' + {zmienna}
+
+liczby -
+Number.isFinite(3)
+Number.isFinite(0/0)
+Number.isFinite(Infinity)
+
+limit
+999999999999999 +1
+10000000000000000
+
+obiekty:
+
+obiekt = {cos:'tak',tak:'tak'}
+console.log(obiekt.tak)
+
+funkcje :
+deklarowanie function(){}
+
+f = function(param){return param}
+f2 = (param) => {return param}
+f3 = (param) => param.cos
