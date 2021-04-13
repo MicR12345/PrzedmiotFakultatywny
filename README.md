@@ -1,4 +1,4 @@
 # PrzedmiotFakultatywny
 
 Michał Ruść 151160
-Miłosz Proc
+Miłosz Proc 151152
