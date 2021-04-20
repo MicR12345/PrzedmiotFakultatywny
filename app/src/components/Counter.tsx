@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomButton from './CustomButton';
 
 interface CounterProps{
     initialNumber?: number;
@@ -21,13 +22,41 @@ const Counter:React.FC<CounterProps> = ({initialNumber,onNumberChange}) => {
         setCounterNumber(number);
         onNumberChange && onNumberChange(number);
     }
+    const setStartNumber = () => {
+        setCounterNumber(initialNumber || 0);
+    }
 
 
-    return (
+    // return (
+    //     <div>
+    //         <button onClick={addNumber} >+</button>
+    //         {counterNumber}
+    //         <button onClick={decreaseNumber} >-</button>
+    //     </div>
+    // );
+    return(
         <div>
-            <button onClick={addNumber} >+</button>
+            <CustomButton onClickFunction = {addNumber} text="+"></CustomButton>
             {counterNumber}
-            <button onClick={decreaseNumber} >-</button>
+            <CustomButton onClickFunction = {decreaseNumber} text="-"></CustomButton>
+            <br/>
+            <CustomButton onClickFunction = {setStartNumber} text="Wyzeruj"></CustomButton>
+            <br/>
+            {counterNumber > 10 && counterNumber<=15 &&
+            <div>
+                Liczba jest wieksza od 10
+            </div> 
+            }
+            {counterNumber > 15 &&
+            <div>
+                Liczba przekroczona
+            </div> 
+            }
+            {counterNumber < -10 &&
+            <div>
+                Liczba jest mniejsza od -10
+            </div> 
+            }
         </div>
     );
 }
