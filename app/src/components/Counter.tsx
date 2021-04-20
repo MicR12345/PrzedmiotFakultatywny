@@ -41,22 +41,6 @@ const Counter:React.FC<CounterProps> = ({initialNumber,onNumberChange}) => {
             <CustomButton onClickFunction = {decreaseNumber} text="-"></CustomButton>
             <br/>
             <CustomButton onClickFunction = {setStartNumber} text="Wyzeruj"></CustomButton>
-            <br/>
-            {counterNumber > 10 && counterNumber<=15 &&
-            <div>
-                Liczba jest wieksza od 10
-            </div> 
-            }
-            {counterNumber > 15 &&
-            <div>
-                Liczba przekroczona
-            </div> 
-            }
-            {counterNumber < -10 &&
-            <div>
-                Liczba jest mniejsza od -10
-            </div> 
-            }
         </div>
     );
 }
