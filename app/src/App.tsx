@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div className="App">
       <CustomHeader>
-        <Counter onNumberChange={(newNumber)=> {console.log(newNumber)}} initialNumber={50}/>
+        <Counter onNumberChange={(newNumber)=> {console.log(newNumber)}} initialNumber={10}/>
         {
           changedNumber>0 && (<div>Liczba jest wieksza od 0</div>)
         }
