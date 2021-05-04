@@ -9,17 +9,53 @@ const useStyles = makeStyles({
 drawer:{
     width:'100%',
     height:'100%',
+    alignItems: 'center',
+    display:'flex',
 },
 menu:{
+    width:"100%",
     height:"10%",
     cursor:'pointer',
     display:'flex',
-
+    textAlign:'center',
+    alignItems: 'center',
+    background: 'LightBlue',
+    borderBottom:'1px solid black',
+    justifyContent:'center',
 },
 paper:{
-    height:'10%'
-}
-
+    height:'10%',
+    alignItems: "center",
+    background: "LightBlue",
+    borderBottom:'1px solid black',
+    flexGrow:0,
+},
+buttonArrow:{
+    height:"100%",
+    width:"auto",
+    flexGrow:1,
+    justifyContent:"space-between",
+    alignItems: 'center',
+    marginLeft:'100%',
+    border:'1px solid black',
+},
+drawerButtons:{
+    alignItems: 'center',
+    display:'flex',
+    textAlign:"center",
+    justifyContent:'space-evenly',
+    border:'1px solid black',
+    height:"100%"
+},
+drawerButton:{
+    alignItems: 'center',
+    textAlign:'center',
+    display:'flex',
+    justifyContent:'space-evenly',
+    flexGrow:1,
+    height:'100%',
+    border:'1px solid black',
+},
 });
 
 const NavPanel = () => {
@@ -27,16 +63,14 @@ const NavPanel = () => {
 
     const history = useHistory();
     const classes = useStyles();
-    const redirectTo = (path: string, name: string) => <div onClick={()=>{ history.push(path) }}>{name}</div>
-
+    const redirectTo = (path: string, name: string) => <div className={classes.drawerButton} onClick={()=>{ history.push(path) }}>{name}</div>
     return (
-    <div>
-        <Container maxWidth={false}
+        <Container maxWidth={'xl'}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
         className = {classes.menu}
         >
-            <ArrowDownwardIcon/>
+            <div className={classes.buttonArrow}><ArrowDownwardIcon/></div>
             <Drawer
                 open={isOpen}
                 className = {classes.drawer}
@@ -44,11 +78,15 @@ const NavPanel = () => {
                 variant = 'persistent'
                 classes={{ paper: classes.paper }}
             >
-            <div>
-            </div>
+            <Container className = {classes.drawerButtons} maxWidth={false}>
+            {redirectTo('/','Home')}
+            {redirectTo('/','Home')}
+            {redirectTo('/','Home')}
+
+            </Container>
         </Drawer>
+        <hr/>
         </Container>
-    </div>
     );
 }
 export default NavPanel;
