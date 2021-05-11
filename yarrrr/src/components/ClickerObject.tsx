@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     ChestClicker_Chest:{
-        background: `url('../img/chest.png')`,
+        background: '../img/chest.png',
         backgroundSize: 'cover',
         width: '200px',
         height: '200px',
@@ -13,6 +13,7 @@ const useStyles = makeStyles({
 
 const ClickCounterDefault = {
     count:0,
+    clickMultiplier:1,
 }
 
 const ChestClicker = () => {
@@ -21,16 +22,17 @@ const ChestClicker = () => {
     const [clickerCounter,setClickerCounter] = React.useState(ClickCounter.count);
 
     const ClickKeeper = () => {
-        const number = clickerCounter;
-        setClickerCounter(clickerCounter+1);
-        const ClickCounter = {
-            count: clickerCounter,
+        const number = (clickerCounter+1)*ClickCounter.clickMultiplier;
+        setClickerCounter(number);
+        const ClickCounterNew = {
+            count: number,
+            clickMultiplier:1,
         }
-        window.localStorage.setItem('ClickCounter',JSON.stringify(ClickCounter));
+        window.localStorage.setItem('ClickCounter',JSON.stringify(ClickCounterNew));
     }
 
     return(
-        <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}></div>
+        <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}><img width="200" height="200" src='../img/chest.png'/></div>
     )
 }
 

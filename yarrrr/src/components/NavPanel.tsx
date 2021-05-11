@@ -3,7 +3,6 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import React from 'react';
 import { useHistory } from 'react-router';
 import { makeStyles } from '@material-ui/core/styles';
-import { Height } from '@material-ui/icons';
 
 const useStyles = makeStyles({
 drawer:{
