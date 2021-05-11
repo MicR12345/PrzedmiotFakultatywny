@@ -1,12 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import image from '../img/chest.png';
 
 const useStyles = makeStyles({
     ChestClicker_Chest:{
-        background: '../img/chest.png',
         backgroundSize: 'cover',
-        width: '200px',
-        height: '200px',
+        width: '612px',
+        height: '408px',
         cursor: 'pointer',
     }
 });
@@ -32,7 +32,7 @@ const ChestClicker = () => {
     }
 
     return(
-        <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}><img width="200" height="200" src='../img/chest.png'/></div>
+        <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}><img width="612" height="408" src={image}/></div>
     )
 }
 
