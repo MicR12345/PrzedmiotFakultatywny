@@ -11,14 +11,22 @@ const useStyles = makeStyles({
     }
 });
 
+const ClickCounterDefault = {
+    count:0,
+}
+
 const ChestClicker = () => {
     const classes = useStyles();
-
-    const [clickerCounter,setClickerCounter] = React.useState(0);
+    const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
+    const [clickerCounter,setClickerCounter] = React.useState(ClickCounter.count);
 
     const ClickKeeper = () => {
         const number = clickerCounter;
         setClickerCounter(clickerCounter+1);
+        const ClickCounter = {
+            count: clickerCounter,
+        }
+        window.localStorage.setItem('ClickCounter',JSON.stringify(ClickCounter));
     }
 
     return(
