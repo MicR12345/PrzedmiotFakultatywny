@@ -80,7 +80,7 @@ const NavPanel = () => {
             >
             <Container className = {classes.drawerButtons} maxWidth={false}>
             {redirectTo('/','Home')}
-            {redirectTo('/','Home')}
+            {redirectTo('/Clicker','Clicker')}
             {redirectTo('/','Home')}
 
             </Container>
