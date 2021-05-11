@@ -37,7 +37,6 @@ buttonArrow:{
     justifyContent:"space-between",
     alignItems: 'center',
     marginLeft:'100%',
-    border:'1px solid black',
 },
 drawerButtons:{
     alignItems: 'center',
