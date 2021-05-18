@@ -1,8 +1,7 @@
 import { LinearProgress } from '@material-ui/core';
-import React, { useState } from 'react';
+import React from 'react';
 import ClickCounterDefault from '../defaults/DefaultClickCounter';
 import StoreClickData from './StoreClickData';
-import { useEffect } from 'react';
 interface PassiveClickerProps{
     value:number,
     time:number,
@@ -17,18 +16,17 @@ React.useEffect(() => {
         number = number + (value * multiplier);
         StoreClickData(number);
     }
-    setInterval(() => {
+    let interval = setInterval(() => {
       if(timer>=time){
           setTimerState(0);
           AddNewNumber();
         }
       else setTimerState(timer+100)
-      return clearTimeout();
     }, 100);
+    return () => clearInterval(interval)
   }, [time,timer,value]);
 return(
 <div>
-    {timer}
     <LinearProgress variant="determinate" value={timer/time * 100}/>
 </div>
 );

@@ -23,7 +23,8 @@ const ChestClicker = () => {
     const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
     const [clickerCounter,setClickerCounter] = React.useState(ClickCounter.count);
     const ClickKeeper = () => {
-        const number = clickerCounter+(1*ClickCounter.clickMultiplier);
+        const ClickCounter2 = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
+        const number = ClickCounter2.count+(1*ClickCounter2.clickMultiplier);
         setClickerCounter(number);
         StoreClickData(number);
     }
@@ -31,7 +32,6 @@ const ChestClicker = () => {
     return(
        
         <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}>
-             {ClickCounter.count}
         </div>
     )
 }

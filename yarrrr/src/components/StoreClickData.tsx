@@ -1,4 +1,3 @@
-import React from 'react';
 import ClickCounterDefault from '../defaults/DefaultClickCounter';
 
 const StoreClickData = (count:number,clickMultiplier?:number,passiveClicker1?:number) => {
