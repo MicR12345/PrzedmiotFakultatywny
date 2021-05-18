@@ -7,7 +7,6 @@ const YarrrrClicker = () => {
         <div>
             <NavPanel/>
             <ClickerObject/>
-            Tu będzie strona klikera
         </div>
     );
 }

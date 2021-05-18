@@ -4,14 +4,20 @@ import image from '../img/chest.png';
 import ClickCounterDefault from '../defaults/DefaultClickCounter';
 import StoreClickData from '../components/StoreClickData';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     ChestClicker_Chest:{
+        backgroundImage: `url(${image})`,
+        backgroundPosition: 'center',
         backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        alignItems: 'center',
+        justifyContent: 'center',
         width: '612px',
         height: '408px',
         cursor: 'pointer',
+        flexDirection: 'column',
     }
-});
+}));
 
 const ChestClicker = () => {
     const classes = useStyles();
@@ -26,7 +32,7 @@ const ChestClicker = () => {
 
     return(
 
-        <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}><img width="612" height="408" src={image}/></div>
+        <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}></div>
     )
 }
 
