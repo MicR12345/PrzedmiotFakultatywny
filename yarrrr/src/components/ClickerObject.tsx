@@ -31,8 +31,10 @@ const ChestClicker = () => {
     }
 
     return(
-
-        <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}></div>
+       
+        <div className={classes.ChestClicker_Chest} onClick={ClickKeeper}>
+             {ClickCounter.count}
+        </div>
     )
 }
 

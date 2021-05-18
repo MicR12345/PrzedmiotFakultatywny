@@ -8,7 +8,7 @@ const YarrrrClicker = () => {
         <div>
             <NavPanel/>
             <ClickerObject/>
-            <PassiveClicker value={1} time={1000} />
+            <PassiveClicker value={1} time={10000} />
             Tu będzie strona klikera
         </div>
     );

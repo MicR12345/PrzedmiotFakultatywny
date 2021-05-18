@@ -1,5 +1,5 @@
 import { LinearProgress } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
 import ClickCounterDefault from '../defaults/DefaultClickCounter';
 import StoreClickData from './StoreClickData';
 import { useEffect } from 'react';
@@ -18,14 +18,17 @@ useEffect(() => {
         StoreClickData(number);
     }
     setInterval(() => {
-      if(timer>=time)setTimerState(0);
-      else setTimerState(timer+10)
-      AddNewNumber();
+      if(timer>=time){
+          setTimerState(0);
+          AddNewNumber();
+        }
+      else setTimerState(timer+100)
     }, 100);
   }, [time,timer,value]);
 return(
 <div>
-    <LinearProgress value={timer}/>
+    {timer}
+    <LinearProgress variant="determinate" value={timer/time * 100}/>
 </div>
 );
 }
