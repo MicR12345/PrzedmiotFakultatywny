@@ -9,7 +9,7 @@ interface PassiveClickerProps{
 }
 const PassiveClicker:React.FC<PassiveClickerProps> = ({value, time}) => {
 const [timer,setTimerState] = React.useState(0);
-useEffect(() => {
+React.useEffect(() => {
     const AddNewNumber = () =>{
         const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
         var number = ClickCounter.count;
@@ -23,6 +23,7 @@ useEffect(() => {
           AddNewNumber();
         }
       else setTimerState(timer+100)
+      return clearTimeout();
     }, 100);
   }, [time,timer,value]);
 return(
