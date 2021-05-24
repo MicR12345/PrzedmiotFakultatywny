@@ -8,16 +8,18 @@ import Page404 from './views/page404/Page404';
 import store from './store';
 
 import './App.css';
+import TodoPanel from './views/todoPanel/TodoPanel';
 
 const  App= () => {
   
   return (
     <div className="App">
       <BrowserRouter>
-        <Provider store={ }>
+        <Provider store={ store }>
           <Switch>
              <Route path="/movie/:id" component={Movie}/>
              <Route path="/" component={Home} exact/>
+             <Route path="/todos" component={TodoPanel}/>
              <Route path="*" component={Page404}/>
           </Switch>
         </Provider>

@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import { TodosList, todosListInitialState, todosStoreReducer } from "../reducers/todos.reducer";
-import { Actions as TodoActions } from '../actions/todos.actions';
+import { TodosList, todosListInitialState, todosStoreReducer } from "./reducers/todos.reducer";
+import { Actions as TodoActions } from './actions/todos.actions';
 
 
-export type StoreActionTypes = TodosActions;
+export type StoreActionTypes = TodoActions;
 
 export interface StoreState {
     todos: TodosList;
