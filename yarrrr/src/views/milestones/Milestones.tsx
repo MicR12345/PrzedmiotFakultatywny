@@ -1,6 +1,7 @@
 import React from 'react';
 import NavPanel from '../../components/NavPanel';
 import { makeStyles } from '@material-ui/core/styles';
+import Milestone from '../../components/Milestone';
 
 const useStyles = makeStyles({
     Milestones:{
@@ -21,13 +22,12 @@ const useStyles = makeStyles({
   },
     });
 
-const Milestones = () =>{
+const Milestones:React.FC = () =>{
     const classes = useStyles();
     return(
         <div>
             <NavPanel/>
             <div className={classes.Milestones}>
-
             </div>
         </div>);
 }
