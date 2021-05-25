@@ -2,10 +2,11 @@ import React from 'react';
 import NavPanel from '../../components/NavPanel';
 import ClickerObject from '../../components/ClickerObject';
 import PassiveClicker from '../../components/PassiveClicker';
+import background from '../../img/Background.png';
 
 const YarrrrClicker = () => {
     return(
-        <div>
+        <div  style ={{ backgroundImage: `url(${background})` }}>
             <NavPanel/>
             <ClickerObject/>
             <PassiveClicker value={1} time={1000} ClickerNumber={1} />
