@@ -26,7 +26,7 @@ const Points = () => {
         let interval = setInterval(() => {
             const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
             setPoints(ClickCounter.count);
-        }, 1000);
+        }, 100);
         return () => clearInterval(interval)
       },[]);
     return(
