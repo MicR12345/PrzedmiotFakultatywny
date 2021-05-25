@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import image from '../img/chest.png';
 import ClickCounterDefault from '../defaults/DefaultClickCounter';
-import StoreClickData from '../components/StoreClickData';
+import {StoreClickData} from './StoreData';
 
 const useStyles = makeStyles(theme => ({
     ChestClicker_Chest:{
