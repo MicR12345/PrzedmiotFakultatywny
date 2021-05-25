@@ -12,16 +12,22 @@ interface PassiveClickerProps{
 const useStyles = makeStyles({
   PassiveClicker:{
       height:'80px',
-      
+      background:'#badadb',
   },
   Buttons:{
     display:'flex',
-    alignItems:'left'
+    justifyContent:'space-between',
+    alignItems:'baseline'
     
   },
   Button:{
+    display:'flex',
     height:'50px',
     border:'1px solid black',
+    background:'gray',
+},
+Text:{
+  display:'flex',
 },
   });
   
@@ -63,7 +69,7 @@ return(
 <div className={classes.PassiveClicker}>
   <div className={classes.Buttons}>
     <Button className={classes.Button} onClick={LevelUp}>Level Up (Level = {level}) Cost = {cost}</Button>
-    
+    <div className={classes.Text}>Generating {value * level} points</div>
   </div>
     <LinearProgress variant="determinate" value={timer/time * 100}/>
 </div>

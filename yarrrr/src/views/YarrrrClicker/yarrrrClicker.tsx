@@ -15,6 +15,7 @@ const YarrrrClicker = () => {
             <PassiveClicker value={8} time={8000} ClickerNumber={4} />
             <PassiveClicker value={16} time={16000} ClickerNumber={5} />
             <PassiveClicker value={32} time={32000} ClickerNumber={6} />
+            <PassiveClicker value={64} time={64000} ClickerNumber={7} />
         </div>
     );
 }
