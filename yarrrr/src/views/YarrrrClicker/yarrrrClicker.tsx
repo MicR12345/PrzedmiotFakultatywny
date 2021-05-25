@@ -4,6 +4,7 @@ import ClickerObject from '../../components/ClickerObject';
 import PassiveClicker from '../../components/PassiveClicker';
 import background from '../../img/Background.png';
 import ClickCounterDefault from '../../defaults/DefaultClickCounter';
+import Points from '../../components/Points';
 
 const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
 
@@ -11,6 +12,7 @@ const YarrrrClicker = () => {
     return(
         <div  style ={{ backgroundImage: `url(${background})` }}>
             <NavPanel/>
+            <Points/>
             <ClickerObject/>
             Automatic Clickers
             <PassiveClicker value={1} time={1000} ClickerNumber={1} />

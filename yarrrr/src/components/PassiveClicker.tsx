@@ -40,7 +40,7 @@ const cost = (value * level * level) + (50 * value);
 React.useEffect(() => {
     const AddNewNumber = () =>{
         const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
-        var number = ClickCounter.count;
+        let number = ClickCounter.count;
         const multiplier = ClickCounter.passiveClicker[ClickerNumber];
         setLevel(multiplier);
         number = number + (value * multiplier);
