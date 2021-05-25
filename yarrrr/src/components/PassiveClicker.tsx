@@ -36,7 +36,7 @@ const ClickCounter2 = JSON.parse(window.localStorage.getItem('ClickCounter') || 
 const classes = useStyles();
 const [timer,setTimerState] = React.useState(0);
 const [level,setLevel] = React.useState(ClickCounter2.passiveClicker[ClickerNumber]);
-const cost = (value * level * level) + (50 * value);
+const cost = (ClickerNumber * level * level) + (50 * ClickerNumber);
 React.useEffect(() => {
     const AddNewNumber = () =>{
         const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
