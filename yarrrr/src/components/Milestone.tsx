@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     Milestone:{
       display:'flex',
       height:'auto',
-      width:'15%',
+      width:'18%',
       border:'1px solid black',
       background:'gray',
       flexWrap:'wrap',
