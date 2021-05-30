@@ -10,14 +10,8 @@ const useStyles = makeStyles({
       justifyContent:'space-evenly',
       alignItems:'baseline',
       flexWrap:'wrap',
+      height:'100vh',
     },
-    Milestone:{
-      display:'flex',
-      height:'50px',
-      width:'200px',
-      border:'1px solid black',
-      background:'gray',
-  },
   Text:{
     display:'flex',
   },

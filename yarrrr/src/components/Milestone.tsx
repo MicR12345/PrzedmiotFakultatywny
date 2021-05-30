@@ -6,12 +6,13 @@ import Checkbox from '@material-ui/core/Checkbox';
 const useStyles = makeStyles({
     Milestone:{
       display:'flex',
-      height:'10%',
+      height:'auto',
       width:'10%',
       border:'1px solid black',
       background:'gray',
       flexWrap:'wrap',
       justifyContent:'space-around',
+      alignItems:'baseline',
   },
   Text:{
     display:'flex',

@@ -6,7 +6,8 @@ import background from '../../img/Background1.jpg';
 const useStyles = makeStyles({
     HomePage:{
         display:'flex',
-        justifyContent:'space-between',
+        height:'100vh',
+        justifyContent:'flex-start',
         alignItems:'center',
         flexDirection:'column',
     },
