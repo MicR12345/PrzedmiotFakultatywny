@@ -7,8 +7,8 @@ const useStyles = makeStyles({
     Milestones:{
       display:'flex',
       justifyContent:'space-evenly',
-      alignItems:'baseline'
-      
+      alignItems:'baseline',
+      flexWrap:'wrap',
     },
     Milestone:{
       display:'flex',
@@ -28,6 +28,13 @@ const Milestones:React.FC = () =>{
         <div>
             <NavPanel/>
             <div className={classes.Milestones}>
+              <Milestone milestoneNumber={1} name='Nazwa' description="First Milestone" />
+              <Milestone milestoneNumber={2} name='Nazwa' description="First Milestone" />
+              <Milestone milestoneNumber={3} name='Nazwa' description="First Milestone" />
+              <Milestone milestoneNumber={4} name='Nazwa' description="First Milestone" />
+              <Milestone milestoneNumber={5} name='Nazwa' description="First Milestone" />
+              <Milestone milestoneNumber={6} name='Nazwa' description="First Milestone" />
+              <Milestone milestoneNumber={6} name='Nazwa' description="First Milestone" />
             </div>
         </div>);
 }

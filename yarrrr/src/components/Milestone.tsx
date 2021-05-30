@@ -1,27 +1,84 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {MilestoneDefault} from '../defaults/Milestones';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const useStyles = makeStyles({
     Milestone:{
       display:'flex',
-      height:'50px',
-      width:'200px',
+      height:'10%',
+      width:'10%',
       border:'1px solid black',
       background:'gray',
+      flexWrap:'wrap',
+      justifyContent:'space-around',
   },
   Text:{
     display:'flex',
+    height:'25px',
   },
     });
 
-const Milestone = () => {
+interface MilestoneProps{
+    milestoneNumber:number,
+    name:string,
+    description?:string,
+}
+
+const Milestone:React.FC<MilestoneProps> = ({milestoneNumber,name,description}) => {
     const classes = useStyles();
+    if(!window.localStorage.getItem('Milestones'))window.localStorage.setItem('Milestones',JSON.stringify(MilestoneDefault));
     const Milestone = JSON.parse(window.localStorage.getItem('Milestones') || JSON.stringify(MilestoneDefault));
-    return (
-        <div className={classes.Milestone}>
-            Milestone TODO {Milestone.milestone[1]}
-        </div>
-    )
+    if(!description){
+        if(Milestone.Milestone[milestoneNumber]==1){
+            return (
+                <div className={classes.Milestone}>
+                <div className={classes.Text}>
+                {milestoneNumber}. {name}
+                <Checkbox disabled checked inputProps={{ 'aria-label': 'milestone checkbox' }} />
+                </div>
+                </div>
+            )
+        }
+        else{
+            return (
+                <div className={classes.Milestone}>
+                <div className={classes.Text}>
+                {milestoneNumber}. {name}
+                <Checkbox disabled inputProps={{ 'aria-label': 'milestone checkbox' }} />
+                </div>
+                </div>
+            )
+        }
+    }
+    else{
+        if(Milestone.Milestone[milestoneNumber]==1){
+        return (
+            <div className={classes.Milestone}>
+                <div className={classes.Text}>
+                {milestoneNumber}. {name}
+                <Checkbox disabled checked inputProps={{ 'aria-label': 'milestone checkbox' }} />
+                </div>
+                <div>
+                {description}
+                </div>
+            </div>
+        )
+        }
+        else{
+            return (
+                <div className={classes.Milestone}>
+                <div className={classes.Text}>
+                {milestoneNumber}. {name}
+                <Checkbox disabled inputProps={{ 'aria-label': 'milestone checkbox' }} />
+                </div>
+                <div>
+                {description}
+                </div>
+            </div>
+            )
+        }
+    }
+
 }
 export default Milestone;

@@ -3,10 +3,7 @@ import NavPanel from '../../components/NavPanel';
 import ClickerObject from '../../components/ClickerObject';
 import PassiveClicker from '../../components/PassiveClicker';
 import background from '../../img/Background.png';
-import ClickCounterDefault from '../../defaults/DefaultClickCounter';
 import Points from '../../components/Points';
-
-const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
 
 const YarrrrClicker = () => {
     return(

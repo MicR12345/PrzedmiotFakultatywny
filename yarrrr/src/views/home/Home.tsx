@@ -1,7 +1,6 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import NavPanel from './../../components/NavPanel';
-import classes from '*.module.css';
 
 const useStyles = makeStyles({
     HomePage:{

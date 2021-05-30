@@ -1,7 +1,7 @@
 import { Button, LinearProgress } from '@material-ui/core';
 import React from 'react';
 import ClickCounterDefault from '../defaults/DefaultClickCounter';
-import {StoreClickData} from './StoreData';
+import {StoreClickData} from '../utils/StoreData';
 import { makeStyles } from '@material-ui/core/styles';
 interface PassiveClickerProps{
     value:number,
