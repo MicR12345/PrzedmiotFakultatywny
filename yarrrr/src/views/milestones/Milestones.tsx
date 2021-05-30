@@ -11,6 +11,7 @@ const useStyles = makeStyles({
       alignItems:'baseline',
       flexWrap:'wrap',
       height:'100vh',
+      flexDirection: 'column',
     },
   Text:{
     display:'flex',
