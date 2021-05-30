@@ -2,6 +2,7 @@ import React from 'react';
 import NavPanel from '../../components/NavPanel';
 import { makeStyles } from '@material-ui/core/styles';
 import Milestone from '../../components/Milestone';
+import background from '../../img/Background2.jpg';
 
 const useStyles = makeStyles({
     Milestones:{
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
 const Milestones:React.FC = () =>{
     const classes = useStyles();
     return(
-        <div>
+        <div style ={{ backgroundImage: `url(${background})` }}>
             <NavPanel/>
             <div className={classes.Milestones}>
               <Milestone milestoneNumber={1} name='Nazwa' description="First Milestone" />

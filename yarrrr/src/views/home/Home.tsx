@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import NavPanel from './../../components/NavPanel';
+import background from '../../img/Background1.jpg';
 
 const useStyles = makeStyles({
     HomePage:{
@@ -29,7 +30,7 @@ const useStyles = makeStyles({
 const Home = () => {
     const classes = useStyles();
     return(
-        <div>
+        <div style ={{ backgroundImage: `url(${background})` }}>
             <NavPanel/>
             <div className={classes.HomePage}>
                 <div className={classes.Text}><h1>Strona główna</h1></div>
