@@ -40,6 +40,7 @@ const Milestone:React.FC<MilestoneProps> = ({milestoneNumber,name,description}) 
     if(!window.localStorage.getItem('Milestones'))window.localStorage.setItem('Milestones',JSON.stringify(MilestoneDefault));
     const Milestone = JSON.parse(window.localStorage.getItem('Milestones') || JSON.stringify(MilestoneDefault));
     if(!description){
+        // eslint-disable-next-line
         if(Milestone.Milestone[milestoneNumber]==1){
             return (
                 <div className={classes.Milestone}>
@@ -62,6 +63,7 @@ const Milestone:React.FC<MilestoneProps> = ({milestoneNumber,name,description}) 
         }
     }
     else{
+        // eslint-disable-next-line
         if(Milestone.Milestone[milestoneNumber]==1){
         return (
             <div className={classes.Milestone}>
