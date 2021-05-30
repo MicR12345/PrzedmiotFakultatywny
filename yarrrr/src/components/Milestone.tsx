@@ -16,7 +16,16 @@ const useStyles = makeStyles({
   },
   Text:{
     display:'flex',
-    height:'25px',
+    height:'50px',
+    width:'100%',
+    justifyContent:'space-around',
+    alignItems:'strech',
+  },
+  a:{
+    display:'flex',
+    height:'50px',
+    justifyContent:'space-around',
+    alignItems:'strech',
   },
     });
 
@@ -57,7 +66,7 @@ const Milestone:React.FC<MilestoneProps> = ({milestoneNumber,name,description}) 
         return (
             <div className={classes.Milestone}>
                 <div className={classes.Text}>
-                {milestoneNumber}. {name}
+                <div className={classes.a}>{milestoneNumber}. {name}</div>
                 <Checkbox disabled checked inputProps={{ 'aria-label': 'milestone checkbox' }} />
                 </div>
                 <div>
