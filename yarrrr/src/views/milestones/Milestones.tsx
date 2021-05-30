@@ -20,8 +20,6 @@ const useStyles = makeStyles({
   },
     });
 
-const Milestones:React.FC = () =>{
-    const classes = useStyles();
     const CheckAcheivementCondiditons = () =>{
       if(!window.localStorage.getItem('ClickCounter'))window.localStorage.setItem('ClickCounter',JSON.stringify(ClickCounterDefault));
       const ClickCounter = JSON.parse(window.localStorage.getItem('ClickCounter') || JSON.stringify(ClickCounterDefault));
@@ -69,6 +67,9 @@ const Milestones:React.FC = () =>{
       else Milestones.Milestone[7]=0;
       window.localStorage.setItem('Milestones',JSON.stringify(Milestones));
   }
+
+const Milestones:React.FC = () =>{
+    const classes = useStyles();
   CheckAcheivementCondiditons();
     return(
         <div style ={{ backgroundImage: `url(${background})` }}>
