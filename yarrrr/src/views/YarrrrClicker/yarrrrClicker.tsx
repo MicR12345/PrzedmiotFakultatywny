@@ -11,7 +11,13 @@ const YarrrrClicker = () => {
             <NavPanel/>
             <Points/>
             <ClickerObject/>
-            Automatic Clickers
+            <div style = {{
+                display: 'flex',
+                color: 'white',
+                fontFamily: 'Times New Roman',
+            }}> 
+                <h1>Automatyczna załoga!</h1>
+            </div>
             <PassiveClicker value={1} time={1000} ClickerNumber={1} />
             <PassiveClicker value={4} time={2000} ClickerNumber={2} />
             <PassiveClicker value={16} time={4000} ClickerNumber={3} />
