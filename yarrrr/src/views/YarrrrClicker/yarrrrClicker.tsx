@@ -9,6 +9,15 @@ const YarrrrClicker = () => {
     return(
         <div style ={{ backgroundImage: `url(${background})` }}>
             <NavPanel/>
+            <div style = {{
+                display: 'flex',
+                color: 'steelblue',
+                fontFamily: 'Times New Roman',
+                alignItems:'center',
+                flexDirection:'column',
+            }}> 
+                <h1>TWÓJ UKOCHANY CLICKER! ZAPRASZAMY</h1>
+            </div>
             <Points/>
             <ClickerObject/>
             <div style = {{
