@@ -83,7 +83,6 @@ const NavPanel = () => {
 
             </Container>
         </Drawer>
-        <hr/>
         </Container>
     );
 }
