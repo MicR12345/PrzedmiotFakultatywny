@@ -35,7 +35,7 @@ const Home = () => {
             <NavPanel/>
             <div className={classes.HomePage}>
                 <div className={classes.Text}><h1>Strona główna</h1></div>
-                <div className={classes.Text}><h2>Najlepszy clicker jaki istnieje na tej stronie</h2></div>
+                <div className={classes.Text}><h2>Najlepszy clicker jaki istnieje, prosimy 5</h2></div>
             </div>
         </div>
     );

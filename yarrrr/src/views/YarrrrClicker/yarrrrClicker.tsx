@@ -7,7 +7,7 @@ import Points from '../../components/Points';
 
 const YarrrrClicker = () => {
     return(
-        <div  style ={{ backgroundImage: `url(${background})` }}>
+        <div style ={{ backgroundImage: `url(${background})` }}>
             <NavPanel/>
             <Points/>
             <ClickerObject/>
